@@ -7,7 +7,7 @@ class Car < ApplicationRecord
             id: self.id,
             model: self.model,
             make: self.make,
-            vin: self.vin,
+            vin: self.vin
             # scores: self.scores.where("user_id=?", self.user_id).score_json
             # scores: self.scores.where("user_id=?", self.user_id).collect(&:points)
         }
