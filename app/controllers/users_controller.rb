@@ -14,8 +14,8 @@ class UsersController < ApplicationController
 
     def profile
         # binding.pry
-        # render json: { user: current_user.user_json }
-        render json: { user: current_user.user }
+        render json: { user: current_user.user_json }
+        # render json: { user: current_user.user }
     end
 
     def create
