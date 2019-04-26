@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-    has_many :favorites
-    has_many :cars, through: :favorites
+    has_many :favorites, dependent: :destroy
+    has_many :cars, through: :favorites, dependent: :destroy
     has_secure_password
     validates :username, uniqueness: { case_sensitive: false }, presence: true
     validates :password, presence: true

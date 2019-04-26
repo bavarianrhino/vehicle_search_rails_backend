@@ -14,8 +14,8 @@ class Favorite < ApplicationRecord
         }
     end
 
-    def self.score_json
-        # Score.all.collect { |s| s.score_json }
+    def self.favorite_json
+        # Favorite.all.collect { |f| f.favorite_json }
         Favorite.all.collect(&:favorite_json)
     end
 end
