@@ -14,21 +14,29 @@ u1 = User.create(username: "heather", password: "1234")
 Car.create(make: "BMW",
     model: "540i",
     year: 1995,
+    api_id: "text",
+    url: "text",
     vin: "K03NSF23KWFE0NK10DSF")
 
 Car.create(make: "BMW",
     model: "525i",
     year: 1995,
+    api_id: "text",
+    url: "text",
     vin: "23NOI23NOF9ENWERO31")
 
 Car.create(make: "Volkswagen",
     model: "Type 2 Camper",
     year: 1973,
+    api_id: "text",
+    url: "text",
     vin: "9239023N4NOKKFW0WKONJ")
 
 Car.create(make: "Volkswagen",
     model: "Type 2 Double Cab",
     year: 1967,
+    api_id: "text",
+    url: "text",
     vin: "923BKJ09FJNOK3IONQ3OI")
 
 
