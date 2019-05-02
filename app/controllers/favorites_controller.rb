@@ -1,5 +1,5 @@
 class FavoritesController < ApplicationController
-    skip_before_action :authorized, only: [:index]
+    before_action :authorized, except: [:create, :index]
 
     def index
         @favorites = Favorite.all
@@ -8,7 +8,8 @@ class FavoritesController < ApplicationController
     end
 
     def create
-        @favorite = Favorite.new(favorite_params)
+        # @favorite = Favorite.new(favorite_params)
+        @favorite = current_user.favorites.build(favorite_params)
         if @favorite && @favorite.valid?
             @favorite.save
             render json: @favorite, status: :created
