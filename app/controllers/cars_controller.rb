@@ -7,7 +7,7 @@ class CarsController < ApplicationController
     end
 
     def create
-		@car = Car.find_or_create_by!(make: car_params['make'], model: car_params['model'], year: car_params[year], vin: car_params['vin'], api_id: car_params['api_id'], url: car_params['url'])
+		@car = Car.find_or_create_by!(make: car_params['make'], model: car_params['model'], year: car_params['year'], vin: car_params['vin'], api_id: car_params['api_id'], url: car_params['url'])
 		if @car.save
 			currentUser = User.find(car_params[:user_id])
 			if currentUser.cars.any?{|car| car['vin'] === @car['vin']}

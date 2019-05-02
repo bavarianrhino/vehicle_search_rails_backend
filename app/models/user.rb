@@ -8,8 +8,11 @@ class User < ApplicationRecord
     def user_json
         {
             id: self.id,
-            username: self.username
-            # cars: self.cars.car_json
+            username: self.username,
+            cars: self.cars.car_json,
+            favorites: self.cars.api_json
+            # favorites: self.favorites.all_json
+            # favorites: self.favorites.favorites_api_json,
             # high_score: self.high_score,
         }
     end

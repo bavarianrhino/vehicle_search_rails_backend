@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    before_action :authorized, except: [:create]
+    before_action :authorized, except: [:create, :index]
 
     # THIS IS HERE FOR DEBUGGING ONLY
     def index
