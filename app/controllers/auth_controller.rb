@@ -1,6 +1,6 @@
 
 class AuthController < ApplicationController
-    skip_before_action :authorized, only: [:login]
+    before_action :authorized, except: [:login]
 
     def login
         # binding.pry

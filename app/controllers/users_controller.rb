@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    skip_before_action :authorized, only: [:create, :index]
+    before_action :authorized, except: [:create]
 
     # THIS IS HERE FOR DEBUGGING ONLY
     def index
