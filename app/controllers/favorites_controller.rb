@@ -1,5 +1,5 @@
 class FavoritesController < ApplicationController
-    before_action :authorized, except: [:create, :index]
+    before_action :authorized, except: [:create, :index, :destroy]
 
     def index
         @favorites = Favorite.all
