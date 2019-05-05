@@ -19,7 +19,15 @@ class FavoritesController < ApplicationController
         end
     end
 
-    
+    def destroy
+        current_user = User.find(favorite_params[:user_id])
+        @favorite = current_user.favorites.find_by(car_id: favorite_params[:movie_id])
+        if @favorite.destroy
+            render json: @favorite, status: :no_content
+        else
+            render json: { error: "Failed to create delete" }, status: :not_acceptable
+        end
+    end 
 
 
     private
