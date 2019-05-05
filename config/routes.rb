@@ -5,4 +5,5 @@ Rails.application.routes.draw do
     resources :users
         post '/login', to: 'auth#login', as: :login
         get '/profile', to: 'users#profile', as: :profile
+        delete '/favorites', to: 'favorites#destory', as: :destory
 end

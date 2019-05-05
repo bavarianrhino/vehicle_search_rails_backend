@@ -1,5 +1,5 @@
 class FavoritesController < ApplicationController
-    before_action :authorized, except: [:create, :index]
+    before_action :authorized, except: [:create, :index, :destroy]
 
     def index
         @favorites = Favorite.all
@@ -19,9 +19,19 @@ class FavoritesController < ApplicationController
         end
     end
 
+    def destroy
+        current_user = User.find(favorite_params[:user_id])
+        @favorite = current_user.favorites.find_by(vin: favorite_params[:vin])
+        if @favorite.destroy
+            render json: @favorite, status: :no_content
+        else
+            render json: { error: "Failed to create delete" }, status: :not_acceptable
+        end
+    end 
+
 
     private
     def favorite_params
-        params.permit(:user_id, :car_id)
+        params.permit(:user_id, :car_id, :vin)
     end
 end

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    before_action :authorized, except: [:create, :index]
+    before_action :authorized, except: [:create, :index, :show]
 
     # THIS IS HERE FOR DEBUGGING ONLY
     def index
@@ -7,15 +7,13 @@ class UsersController < ApplicationController
         render json: @users.user_json, status: :ok
     end
 
-    # def show
-    #   @user = User.find(params[:id])
-    #   render json: @user.user_json, status: :ok
-    # end
+    def show
+      @user = User.find(params[:id])
+      render json: @user.user_json, status: :ok
+    end
 
     def profile
-        # binding.pry
         render json: { user: current_user.user_json }
-        # render json: { user: current_user.user }
     end
 
     def create
