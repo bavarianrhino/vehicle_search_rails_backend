@@ -19,6 +19,8 @@ class FavoritesController < ApplicationController
         end
     end
 
+    
+
 
     private
     def favorite_params
