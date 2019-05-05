@@ -21,7 +21,7 @@ class FavoritesController < ApplicationController
 
     def destroy
         current_user = User.find(favorite_params[:user_id])
-        @favorite = current_user.favorites.find_by(car_id: favorite_params[:movie_id])
+        @favorite = current_user.favorites.find_by(vin: favorite_params[:vin])
         if @favorite.destroy
             render json: @favorite, status: :no_content
         else
@@ -32,6 +32,6 @@ class FavoritesController < ApplicationController
 
     private
     def favorite_params
-        params.permit(:user_id, :car_id)
+        params.permit(:user_id, :car_id, :vin)
     end
 end

@@ -5,7 +5,8 @@ class Favorite < ApplicationRecord
     def favorite_json
         {
             user_id: self.user_id,
-            car_id: self.car_id
+            car_id: self.car_id,
+            vin: self.car.vin
             # api_ids: self.car.when("car_id=?", self.car_id).car_json
             # username: self.user.username,
             # make: self.car.make,
