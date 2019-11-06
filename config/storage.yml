@@ -18,10 +18,11 @@ local:
 google:
   service: GCS
   project: vehicle-search-backend
-  credentials: <%= ENV['GOOGLE_APPLICATION_CREDENTIALS'] %>
+  credentials: <%= Rails.root.join("config/secrets/vehicle-search-rails-backend.json") %>
   bucket: vehicle-backend-bucket
 
 # credentials: <%= Rails.root.join("path/to/gcs.keyfile") %>
+# credentials: <%= ENV['GOOGLE_APPLICATION_CREDENTIALS'] %>
 
 # Use rails credentials:edit to set the Azure Storage secret (as azure_storage:storage_access_key)
 # microsoft:
