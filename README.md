@@ -3,22 +3,26 @@
 
 > Auto Pasture is a fullstack web application that connects buyers to vehicles that are otherwise not listed on other mainstream marketplaces. Auto Pasture gives back the power to users with easy and simplified vehicle searches that connects them to sellers based on their own custom search parameters. This application includes a full gamut of features including everything from authentication, geolocation services, heavy usage of custom API queries and error handing of inconsistent data.
 
-<div align="center">
-  <h4>Login & Search Vehicles</p>
-  <p>USERNAME: guest | PASSWORD: 1234</p>
-  <button href="https://bavarianrhino.github.io/vehicle_search_react_frontend/"><img src="/public/e34reariconBlack.png">Demo Client</button>
-  <button href="https://autopasture.herokuapp.com/users">Demo API</button>
-</div>
-
 ## 🌎 Motivation
 >Full-Stack Web application that profiles advanced features of a Ruby on Rails API and React/Redux Frontend Client located in a separately [Coded Github Repository](https://github.com/bavarianrhino/vehicle_search_react_frontend). This Application RESTfully persists user data with a postgreSQL database via Active Record implementing a has-many-through model relationship along with full CRUD actions.
 
+## 🎬 Interactive Demo
 
-## 🎬 Demo
-![Recordit GIF](https://recordit.co/eqfPPP3cXW.gif)
+<div align="center">
+  <!-- <h4>Login & Search Vehicles</p> -->
+  <a href="https://bavarianrhino.github.io/vehicle_search_react_frontend/">Frontend Demo    </a><a href="https://bavarianrhino.github.io/vehicle_search_react_frontend/"><img src="/public/e34reariconBlack.png"></a>
+  <p>USERNAME: guest | PASSWORD: 1234</p>
+  <br>
+  <a href="https://autopasture.herokuapp.com/users"><img src="/public/e34reariconBlack.png"></a><a href="https://autopasture.herokuapp.com/users">    Users API Endpoint</a>
+</div>
+
+## 🎬 Visual Demo
+
 <div align="center">
     <p>Login provided using Bcrypt and JWT authentication.</p>
 </div>
+
+![Recordit GIF](https://recordit.co/eqfPPP3cXW.gif)
 
 
 ## 🔬 Learning Objectives
